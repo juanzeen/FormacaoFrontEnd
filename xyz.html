@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de médias</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        body{
+            background-color: #505050;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            width: 100vh;
+            margin: 16px auto;
+            padding: 16px 24px 16px 16px;
+            border : 4px solid #564787;
+            background-color: #242325;
+            color: white;
+            border-radius: 12px;
+            font-size: 1.2rem;
+        }
+        form {
+            margin-top: 16px
+        }
+        .quest {
+            display: flex;
+            flex-direction: column;
+            width: 99%;
+            height: 3   0px;
+            border-radius: 8px;
+            border: none;
+            background-color: #564787;
+            color: white;
+            font-size: 14pt;
+            padding: 8px;
+        }
+        input#disciplina.quest{
+            margin: 1px 0px;
+        }
+        input#disciplina.quest:active {
+            background-color: #564787;
+        }
+        main input:focus {
+            outline: none;
+        }
+        #btn {
+            margin: 10px;
+            background-color: #B3B3B3;
+            border: none;
+            border-radius: 8px;
+            width: 100px;
+            height: 40px;
+            font-size: 18px;
+            border: 3px solid #564787;
+        }
+        #btn:hover {
+            cursor: pointer;
+        }
+        #btn:active {
+            box-shadow: 2px 2px 5px #4222aa;
+            background-color: #564787;
+            color: white;
+            border: 3px solid #B3B3B3;
+            cursor: pointer;
+        }
+        #sec {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 14pt;
+        }
+        #footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: rgb(179, 179, 179);
+        }
+    </style>
+    <script>
+        function calculadora(){
+            let disc = document.getElementById('disciplina');
+            let nota1 = document.getElementById('nota1');
+            let nota2 = document.getElementById('nota2');
+            let nota3 = document.getElementById('nota3');
+            let nota4 = document.getElementById('nota4');
+            let res = document.getElementById('res');
+            
+            if (disc.value.length == 0 || nota1.value.length == 0 || nota2.value.length == 0 || nota3.value.length == 0 || nota4.value.length == 0){
+                res.innerHTML = "Preencha todos os campos!";
+            }else{
+                let media = (parseFloat(nota1.value) + parseFloat(nota2.value) + parseFloat(nota3.value) + parseFloat(nota4.value)) / 4;
+                
+                res.innerHTML = `Resultado: sua média anual na disciplina de ${disciplina.value } é ${media}.`;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <main class="main">
+        <h1>Calculadora de médias</h1>
+        <form action="calculadoraDeMedias" method="post">
+            <label for="disciplina" class="label">Disciplina</label>
+            <input type="text" name="disciplina" id="disciplina" class="quest" placeholder="Digite o nome da disciplina">
+            <br>
+            <label for="nota1" class="label">Nota 1:</label>
+            <input type="number" name="nota1" id="nota1" class="quest" min="0" max="10" step="0.01" required placeholder="Digite a nota do 1º bimestre">
+            <br>
+            <label for="nota2" class="label">Nota 2:</label>
+            <input type="number" name="nota2" id="nota2" class="quest" min="0" max="10" step="0.01" required placeholder="Digite a nota do 2º bimestre">
+            <br>
+            <label for="nota3" class="label">Nota 3:</label>
+            <input type="number" name="nota3" id="nota3" class="quest" min="0" max="10" step="0.01" required placeholder="Digite a nota do 3º bimestre">
+            <br>
+            <label for="nota4" class="label">Nota 4:</label>
+            <input type="number" name="nota4" id="nota4" class="quest" min="0" max="10" step="0.01" required placeholder="Digite a nota do 4º bimestre">
+            <br>
+        </form>
+        <div id="sec">
+            <p><input type="button" value="Calcular" onclick="calculadora()" id="btn"></p>
+            <div id="res">
+                <p>Resultado: </p>
+            </div>
+        </div>
+        <p id="footer">Kevin Benevides &copy; 2022</p>
+    </main>
+
+</body>
+</html>

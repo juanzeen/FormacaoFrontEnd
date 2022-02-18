@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros</title>
+    <h1>Calculadora de Rendimentos</h1>
+</head>
+
+<script>
+    function calculo(){
+       let saldo = document.getElementsByName("saldo");
+       let rendimento = document.getElementById("r");
+       let meses = document.getElementById("m");
+       let res = document.getElementById("result")
+       if(saldo.value.length == 0 || rendimento.value.length == 0 || meses.value.lenght == 0){
+           res.innerHTML = "Preencha todos os campos"
+       }
+    }
+</script>
+<body>
+    <form action="calc" method="post"></form>
+    <label for="saldo">Saldo da conta bancária:</label>
+    <input type="number", name="saldo", id="s", class="quest", placeholder="Saldo">
+    <br> 
+    <br>
+    <label for="rendimento">Rendimento mensal:</label>
+    <input type="number", name="rendimento", id="r", class="quest", placeholder="Rendimento">
+    <br>
+    <br>
+    <label for="meses">Meses de aplicação:</label>
+    <input type="number", min="1", name="meses", id="m", class="quest", placeholder="Meses">
+    
+<div id="s"><p><input type="button" value="Calcular rendimentos" onclick="calculo()" id="btn"> </p></div>
+    <div id = "result">
+        <p>Resultado:</p>
+    </div>
+
+</div>
+</body>
+</html>

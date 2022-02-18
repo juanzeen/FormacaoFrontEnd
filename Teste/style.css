@@ -1,0 +1,31 @@
+body {
+    background-color:darkgrey;
+}
+
+h1{
+    color:black;
+    background-color:pink;
+    border: 2px solid #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-display: inline;
+    text-align: center;
+}
+
+a{
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid black;
+    color: black;
+    background-color: pink;
+    text-decoration: none;
+}
+
+
+
+img{
+    width: 400px;
+    height: 400px;
+    
+}
