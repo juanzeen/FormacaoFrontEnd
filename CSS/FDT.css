@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.title{
+    font-family:Poppins;
+    font-size: small;
+    color: white; 
+    text-align: center;
+    border: 10 px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: thin thin thin thin;
+    border-color: green;
+    margin-left: 300px;
+    margin-right: 300px;
+    
+    
+}
+
+.subs{
+    font-family:Poppins;
+    font-size: medium;
+    color: white;
+    text-align: center;
+    margin-left: 350px;
+    margin-right: 350px;
+   
+}
+
+.projectList{
+    font-family:Poppins;
+    font-size: medium;
+    color: white;
+    justify-content: center;
+    list-style:circle;
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 10px;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: thin thin thin thin;
+    border-color: green;
+}
+
+a:link{
+    color: green;
+    text-decoration: none;
+}
+a:visited{
+    color:green;
+    text-decoration: none;
+}
+a:hover{
+    color: green;
+    text-decoration: none;
+}
+a:active{
+    color:green; 
+    text-decoration: none;
+}
+
+footer, a:link{
+    color:green;
+}
+
+#center{
+    font-family: Poppins;
+    text-align: center;
+    color: green;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+#textC{
+    color:white
+}
+#liTi{
+    color: white;
+}
+
+#participate{
+    font-family:Poppins;
+    font-size: medium;
+    color: white;
+}
+
+#lau{
+    color: green;
+}
+body{
+    background-color: rgb(34, 33, 33)
+}
+
+footer{
+    color: green;
+    font-family:Poppins;
+    font-size: small;
+    text-align:center;
+    margin-top: 40px;
+}
