@@ -1,0 +1,16 @@
+#card{
+    width: 500px;
+    height: 100px;
+    padding: 10px 20px;
+    margin: 15px;
+    border: 3px solid #3389af;
+    border-radius: 3px;
+    outline: 3px solid #22789e;
+}
+
+.ttl{
+    letter-spacing: 2px;
+    color: #FFF;
+    background-color: rgba(7, 80, 82, 0.3);
+
+}
