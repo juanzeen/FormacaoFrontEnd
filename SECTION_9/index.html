@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudBoost</title>
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar-container">
+            <!-- parecido com a div, mas indica navegação -->
+            <nav>
+                <a href="">
+                    <!-- logo é um ícone que foi pego no devicon, chamado electron  -->
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" alt="Logo" class="logo">
+                </a>
+                
+                <ul class="navbar-items">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Prices</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" id="emphasis">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <div class="main-banner">
+                <h1>AudBoost</h1>
+                <p>The best services for boost your job!</p>
+            </div>
+
+            <section class="services-container">
+                <ul>
+                    <li>
+                        <i class="fa-regular fa-user" id="user"></i>
+                        <h3>Personal development</h3>
+                        <p>We help you to improve your communicative abilities and 
+                            gave to you a menthory about how act on the medias.</p>
+
+                    </li>
+
+                    <li>
+                        <i class="fa-regular fa-circle-up" id="arrow"></i>
+                        <h3>+ Range</h3>
+                        <p>We will increase your influence and range. 
+                            You'll get the most incredible view numbers.</p>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-bomb" id="bomb"></i>
+                        <h3>Bomb!</h3>
+                        <p>Your profile will blow up on the Internet, 
+                            then... What are you waiting for join us?</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="price-container">
+                <h2>Plans and Prices</h2>
+                <p>Select the perfect plan for you!</p>
+                <div class="plans-container">
+                    <div class="plan">
+                        <ul>
+                            <li class="price">30US$/Month</li>
+                            <li class="plan-name" id="basic-plan-ttl">Basic</li>
+                            <li>1 Menthory for week!</li>
+                            <li>Near influencers</li>
+                            <li>Sponsorship granted</li>
+                            <li class="plan-btn">I want!</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="plan">
+                        <ul>
+                            <li class="price recommended">50US$/Month</li>
+                            <li class="plan-name" id="premium-plan-ttl">Premium</li>
+                            <li>3 menthory for week!</li>
+                            <li>High caliber influencers</li>
+                            <li>10+ sponsors</li>
+                            <li class="plan-btn recommended">I want!</li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="plan">
+                        <ul>
+                            <li class="price">80US$/Month</li>
+                            <li class="plan-name" id="gold-plan-ttl">Gold</li>
+                            <li>1 menthory for day!</li>
+                            <li>Bigger influencers</li>
+                            <li>Biggest brands</li>
+                            <li class="plan-btn">I want!</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="search-container">
+                <h2>Search your social media to get a feedback!</h2>
+                <p>We will give to you a feedback about your profile!</p>
+                <form>
+                    <input type="text" name="profile" id="profile" placeholder="@Juanzeen">
+                    <input type="submit" value="Search profile">
+
+                </form>
+            </section>
+        </main>
+
+        <section class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Put your infos here and we'll sent to you a email1</p>
+            <form class="form-box">
+
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="submit" value="Sent">
+
+            </form>
+        </section>
+
+        <footer>
+            <h3>Juan | 2023</h3>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+}
+
+body{
+    background-color: #222;
+    color: #eee;
+}
+
+p, label{
+    color: #ddd;
+    font-size: 18px;
+}
+
+input, textarea{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #333;
+    color: #ddd;
+    font-size: 15px;
+    padding: 10px 0;
+ 
+}
+
+textarea{
+    overflow-y: hidden;
+    padding: 10px 5px;
+
+}
+/* passando este type com o tipo do input conseguimos
+alterar coisas específicas */
+input[type="text"],
+input[type="number"], 
+input[type="date"],
+textarea{
+    width: 400px;
+}
+
+input[type="file"]{
+   display: none;
+}
+
+
+.form-container{
+    width: 50%;
+    background-color: #333;
+    margin: 0 auto;
+    /* auto para ficar sempre centralizado */
+    position: relative;
+    /* relativo para caso tenhamos algum elemento absoluto dentro dele, ele ser o ponto de referencia */
+    top: 60px;
+    border: 2px double #8d57bd;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+
+.form-header{
+    border-bottom: 2px double #8d57bd;
+    height: 45px;
+    background-color: #481079;
+}
+
+.form-header h4{
+    text-align: center;
+    border-bottom: 1px double #eee;
+    width: 100px;
+    margin: 0 auto;
+    height: 45px;
+    line-height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#form-title{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.form-body{
+    padding: 30px;
+}
+
+
+.form-body p{
+    margin-bottom: 20px;
+}
+
+.requiredF{
+    color: #8d57bd;
+}
+
+.box-input{
+    margin-bottom: 30px;
+}
+
+
+.box-input p{
+    margin-top: 12px;
+}
+
+.radio{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.block{
+    display: block;
+}
+
+
+.tags-inputs{
+    display: inline-block;
+    margin: 0px 30px 30px 0px
+}
+
+.tags-inputs li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+#file-input{
+    text-align: center;
+    padding: 15px;
+    margin: 16px 0 0 380px;
+    border-radius: 50px;
+    display: inline;
+    cursor: pointer;
+    background-color: #5b2788;
+}
+
+#file-input label{
+    cursor: pointer;
+}
+
+#box-btn{
+    margin-top: 40px;
+    display: inline-block;
+    width: auto;
+}
+
+.btn{
+    padding: 20px 30px;
+    margin-left: 200px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid #5b2788;
+    text-transform: uppercase;
+    /* o transition é passado na regra sem hover, para que funcione na entrada e saída
+    da animação */
+    transition: 1s;
+}
+
+.btn:hover{
+  
+    border: 1px solid transparent;
+    background-color: #8d57bd;
+    color: #222;
+    scale: 1.1;
+}
