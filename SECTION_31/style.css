@@ -1,0 +1,161 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #FFF;
+}
+
+body{
+    background-image: linear-gradient(330deg, #2e0141 0%, #4e1180 98%);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+button{
+    background-color: #222 ;
+    color: #FFF;
+    border: 1px solid #aaa;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .6s;
+}
+ 
+button i{
+    color: #FFF;
+    font-weight: bold;
+    /* fazemos isso para que o i não impeça o evento do botão ser ativado! */
+    pointer-events: none;
+}
+
+button:hover{
+    background-color: #38044e;
+}
+
+input,select{
+    padding: .25rem .5rem;
+    background-color: #222;
+    border: 1px solid #ccc;
+}
+
+.hiden{
+    display: none;
+}
+
+.todo-container{
+    max-width: 500px;
+    margin: 5rem auto;
+    background-color: #222;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 14px 16px 20px #331342;
+}
+
+.todo-container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #aaa;
+}
+
+#todo-form,
+#edit-form{
+    padding: 1rem;
+    border-bottom: 1px solid #aaa;
+}
+
+
+#todo-form p,
+#edit-form p{
+   margin-bottom: .5rem;
+   font-weight: bold;
+}
+
+.form-control{
+    display: flex;
+}
+
+.form-control input{
+    margin-right: .3rem;
+}
+
+#cancel-edit-btn{
+    margin-top: 1rem;
+    
+}
+
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #CCC;
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right: 1px solid #DDD;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select{
+    flex: 1;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #AAA;
+    transition: .3s;
+}
+
+.todo h3{
+    flex: 1;
+    font-size: .9rem;
+}
+
+.todo button{
+    margin-left: .4rem;
+}
+
+.done{
+    border-bottom: 1px solid #8224CF;
+}
+
+.done h3{
+    color: #8224cf;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.done button{
+    border-color: #8224CF;
+    background-color: #38044e;
+}
+

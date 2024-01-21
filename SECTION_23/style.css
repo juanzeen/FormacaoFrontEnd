@@ -1,0 +1,9 @@
+body{
+    margin-bottom: 10rem;
+}
+
+#button-container{
+    padding: 2rem;
+    background-color: #EEE;
+    margin: 1rem 0;
+}
