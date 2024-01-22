@@ -124,6 +124,11 @@ input,select{
 
 #filter select{
     flex: 1;
+    cursor: pointer;
+}
+
+#filter select option{
+    cursor: pointer;
 }
 
 .todo{
@@ -138,6 +143,7 @@ input,select{
 .todo h3{
     flex: 1;
     font-size: .9rem;
+    transition: .3s;
 }
 
 .todo button{
@@ -146,12 +152,14 @@ input,select{
 
 .done{
     border-bottom: 1px solid #8224CF;
+    transition: .3a;
 }
 
 .done h3{
     color: #8224cf;
     text-decoration: line-through;
     font-style: italic;
+    transition: .3s;
 }
 
 .done button{

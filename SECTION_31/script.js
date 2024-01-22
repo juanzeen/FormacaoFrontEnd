@@ -12,7 +12,9 @@ const filterBtn = document.querySelector("#filter-select");
 let oldInputValue;
 
 //funções
-const saveTodo = (text, done = 0, save = 1) => {
+//parametros usados para resgatar as tarefas do localstorage
+//para a criação do usuário os parametros default sá o suficiente
+const saveTodo = (text, done = false, save = 1) => {
   const todo = document.createElement("div");
   todo.classList.add("todo");
 
@@ -157,9 +159,9 @@ document.addEventListener("click", (e) => {
   if (targetEl.classList.contains("edit-todo")) {
     toggleForms();
 
-    editInput.value = todoTitle;
-    editInput.focus();
     oldInputValue = todoTitle;
+    editInput.value = oldInputValue;
+    editInput.focus();
   }
 });
 
@@ -198,7 +200,6 @@ eraseButton.addEventListener("click", (e) => {
 
 filterBtn.addEventListener("change", (e) => {
   const filterValue = e.target.value;
-  console.log(filterValue);
   filterTodos(filterValue);
 });
 
