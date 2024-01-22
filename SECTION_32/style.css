@@ -170,6 +170,12 @@ input:focus {
     border: 2px solid #81D340;
     color: #81D340;
     padding: .5rem 1rem;
+    transition: .4s;
+}
+
+#generated-password .not-copy{
+    border: 2px solid #FF0000;
+    color: #FF0000; 
 }
 
 .hide{

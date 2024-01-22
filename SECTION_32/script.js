@@ -40,8 +40,10 @@ const createPass = (
   getSymbol
 ) => {
   let pass = "";
-  const passh4 = generatedPassword.querySelector("h4")
-  passh4.style.color = "#333"
+  const passh4 = generatedPassword.querySelector("h4");
+  passh4.style.color = "#333";
+  copyPassbtn.classList.remove("not-copy");
+  copyPassbtn.innerText = "Copiar"
 
   const passLength = lengthInp.value;
 
@@ -53,14 +55,14 @@ const createPass = (
 
   if (symbolsInp.checked) genArray.push(getSymbol);
 
-  if (genArray.length === 0 || lengthInp.value <=0) {
+  if (genArray.length === 0 || lengthInp.value <= 0) {
     generatedPassword.style.display = "block";
     passh4.innerText = "Impossível gerar senha!";
-    passh4.style.color = "#FF0000"
+    passh4.style.color = "#FF0000";
+    copyPassbtn.classList.add("not-copy");
+    copyPassbtn.innerText = "Impossível copiar!"
     return;
-
   }
-  
 
   for (i = 0; i < passLength; i = i + genArray.length) {
     genArray.forEach(() => {
@@ -90,19 +92,30 @@ copyPassbtn.addEventListener("click", (e) => {
   e.preventDefault();
   const pass = generatedPassword.querySelector("h4").innerText;
 
-//  usaremos o navigator para o usarios fazer um ctrl c a partir do click
-// o navigator é baseado em promises, por isso usamos o then
-navigator.clipboard.writeText(pass).then(()=>{
-  copyPassbtn.innerText = "Senha copiada!"
+  if(copyPassbtn.classList.contains("not-copy")) return;
 
-  setTimeout(() =>{
-    copyPassbtn.innerText = "Copiar";
-  }, 1000)
-})
-})
+  //  usaremos o navigator para o usarios fazer um ctrl c a partir do click
+  // o navigator é baseado em promises, por isso usamos o then
+  navigator.clipboard
+    .writeText(pass)
+    .then(() => {
+      copyPassbtn.innerText = "Senha copiada!";
+
+      setTimeout(() => {
+        copyPassbtn.innerText = "Copiar";
+      }, 1000);
+    })
+    .then(() => {
+      setTimeout(() => {
+        !generateOptions.classList.contains("hide")
+          ? generateOptions.classList.toggle("hide")
+          : null;
+      }, 3000);
+    });
+});
 
 lengthInp.addEventListener("submit", (e) => {
   e.preventDefault();
   createPass(getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol);
-  console.log("submit")
+  console.log("submit");
 });
