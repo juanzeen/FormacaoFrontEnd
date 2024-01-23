@@ -140,8 +140,9 @@ const searchNotes = (search) => {
 
 const getNotes = () => {
   const notes = JSON.parse(localStorage.getItem("notes")) || "[]";
+  console.log(notes)
   //quando compara bool, o true vira 1 e o false vira 0
-  const orderedNotes = notes.sort((a, b) => (a.fixed > b.fixed ? -1 : 1));
+  const orderedNotes = notes.sort((a, b) => (a.fixed > b.fixed ? -1 : 1)) ||[];
 
   return orderedNotes;
 };
