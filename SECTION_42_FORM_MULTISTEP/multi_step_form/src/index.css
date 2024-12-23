@@ -1,0 +1,15 @@
+*{
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+body{
+  background-color: #f9fafc;
+}
+
+p{
+  color: #777;
+}
