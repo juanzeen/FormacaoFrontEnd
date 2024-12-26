@@ -1,0 +1,17 @@
+.welcome-container{
+  text-align: center;
+  max-width: 500px;
+}
+
+.welcome-container h2,
+.welcome-container p{
+  margin-bottom: 1rem;
+}
+
+.welcome-container p{
+  color: #8435de;
+}
+
+.welcome-container img{
+  margin-top: 2rem;
+}
