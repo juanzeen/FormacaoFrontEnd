@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react'
 
 import { useNavigate } from 'react-router-dom'
 
+import useToast from '../hooks/useToast'
+
 import './Form.css'
 
 const CreateParty = () => {
@@ -19,6 +21,8 @@ const CreateParty = () => {
   const [budget, setBudget] = useState(0)
   const [partyServices, setPartyServices] = useState([])
 
+  const navigate = useNavigate()
+
   useEffect(() => {
     const loadServices = async () => {
       const res = await partyFetch.get("/services")
@@ -29,11 +33,51 @@ const CreateParty = () => {
     loadServices()
   }, [])
 
+
+  const handleServices = (e) => {
+    const checked = e.target.checked
+    const value = e.target.value
+    const filteredService = services.filter((s) => s._id === value)
+
+    if (checked) {
+      setPartyServices((services) => [...services, filteredService[0]])
+    } else {
+      setPartyServices((services) => services.filter((s) => s._id !== value))
+    }
+
+  }
+
+  const createParty = async (e) => {
+
+    e.preventDefault()
+
+    try {
+      const party = {
+        title,
+        author,
+        description,
+        image,
+        budget,
+        services: partyServices
+      }
+
+      const res = await partyFetch.post("/parties", party)
+
+      if (res.status === 201) {
+        navigate("/")
+        useToast(res.data.msg)
+      }
+    } catch (error) {
+      useToast(error.response.data.msg, "error")
+    }
+
+  }
+
   return (
     <div className='form-page'>
       <h2>Create your next party</h2>
       <p>Define your budget and choose the services</p>
-      <form>
+      <form onSubmit={(e)=> createParty(e)}>
         <label>
           <span>Party Owner</span>
           <input type="text" placeholder='Put your name' required onChange={(e) => setAuthor(e.target.value)} value={author}/>
@@ -64,14 +108,14 @@ const CreateParty = () => {
                 <p className="service-name">{service.name}</p>
                 <p className="service-price">R${service.price}</p>
                 <div className="checkbox-container">
-                  <input type="checkbox" value={service._id} />
+                  <input type="checkbox" value={service._id} onChange={(e) => handleServices(e)}/>
                   <p>Marque para solicitar</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <input type="submit" value="Crate party!" className='btn'/>
+        <input type="submit" value="Create party!" className='btn'/>
       </form>
     </div>
   )

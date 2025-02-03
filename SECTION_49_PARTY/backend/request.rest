@@ -62,7 +62,7 @@ Content-Type: application/json
 GET http://localhost:3000/api/parties
 
 ###
-GET http://localhost:3000/api/parties/679c0c12c1072f7ffad1cc93
+GET http://localhost:3000/api/parties/679c0c12c1072f7ffad1cc72
 
 ###
 DELETE http://localhost:3000/api/parties/679c0d4ec1072f7ffad1cc93
