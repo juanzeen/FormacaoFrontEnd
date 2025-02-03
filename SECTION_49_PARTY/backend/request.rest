@@ -1,0 +1,96 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+  {
+    "name": "DJ",
+    "description": "Anime a sua festa com música eletrônica!",
+    "price": 1800,
+    "image": "https://images.unsplash.com/photo-1516873240891-4bf014598ab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  }
+
+###
+
+GET http://localhost:3000/api/services
+
+###
+GET http://localhost:3000/api/services/679bcf41efb13ef5b9df6ded
+
+###
+
+DELETE http://localhost:3000/api/services/679bd0d4c46d0c66db29467f
+
+###
+
+PUT http://localhost:3000/api/services/679bcf41efb13ef5b9df6ded
+Content-Type: application/json
+
+{
+  "name": "Updated service again",
+  "description": "Now i was updated again, fella!",
+  "price": 10101010,
+  "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F740771838704930788%2F&psig=AOvVaw3YvdypOhWW7YqxclDh5DjZ&ust=1738350703168000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjxrJmTnosDFQAAAAAdAAAAABAE"
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+  "title": "Random Party 15",
+  "author": "J",
+  "description": "Random desc 15",
+  "budget": 10000000,
+  "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F740771838704930788%2F&psig=AOvVaw3YvdypOhWW7YqxclDh5DjZ&ust=1738350703168000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjxrJmTnosDFQAAAAAdAAAAABAE",
+  "services": [{
+  "name": "Service 3",
+  "description": "Description randomics 3",
+  "price": 33200,
+  "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F740771838704930788%2F&psig=AOvVaw3YvdypOhWW7YqxclDh5DjZ&ust=1738350703168000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjxrJmTnosDFQAAAAAdAAAAABAE"
+
+    },
+    {
+  "name": "Service 4",
+  "description": "Description randomics 4",
+  "price": 7300,
+  "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F740771838704930788%2F&psig=AOvVaw3YvdypOhWW7YqxclDh5DjZ&ust=1738350703168000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjxrJmTnosDFQAAAAAdAAAAABAE"
+    }
+  ]
+}
+
+###
+
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/679c0c12c1072f7ffad1cc93
+
+###
+DELETE http://localhost:3000/api/parties/679c0d4ec1072f7ffad1cc93
+
+###
+
+PUT http://localhost:3000/api/parties/679c0c12c1072f7ffad1cc72
+Content-Type: application/json
+
+
+{
+  "title": "Random Party 10",
+  "author": "J",
+  "description": "Random desc 10",
+  "budget": 10000,
+  "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F740771838704930788%2F&psig=AOvVaw3YvdypOhWW7YqxclDh5DjZ&ust=1738350703168000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjxrJmTnosDFQAAAAAdAAAAABAE",
+  "services": [{
+  "name": "Service 3",
+  "description": "Description randomics 3",
+  "price": 9000,
+  "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F740771838704930788%2F&psig=AOvVaw3YvdypOhWW7YqxclDh5DjZ&ust=1738350703168000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjxrJmTnosDFQAAAAAdAAAAABAE"
+
+    },
+    {
+  "name": "Service 4",
+  "description": "Description randomics 4",
+  "price": 700,
+  "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F740771838704930788%2F&psig=AOvVaw3YvdypOhWW7YqxclDh5DjZ&ust=1738350703168000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjxrJmTnosDFQAAAAAdAAAAABAE"
+    }
+  ]
+}
